@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS优先级</title>
+    <style>
+        /*
+        1. 当同一个元素指定多个选择器，就会有优先级的产生
+
+        2. 选择器相同，则执行层叠性
+
+        3. 选择器不同，则按权重
+            - 类选择器权重为 10
+            - 伪类选择器权重为 10
+            - ID选择器权重为 100
+        */
+        .test {
+            color: red;
+        }
+
+        div {
+            color: pink;
+        }
+
+        #demo {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test" id="demo">你笑起来真好看</div>
+</body>
+
+</html>
