@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>外边距合并-嵌套块级元素垂直外边距塌陷</title>
+    <style>
+    .box-father {
+        width: 200px;
+        height: 200px;
+        background-color: #b2b6b6;
+        /* 可以為父元素定義上內邊距 */
+        /* padding-top: 100px; */
+    }
+
+    .box-child {
+        width: 100px;
+        height: 100px;
+        background-color: #7f9faf;
+        margin-top: 100px;
+    }
+
+    .resolve {
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 元素的margin-top 作用在了父元素上 -->
+    <div class="box-father">
+        <div class="box-child"></div>
+    </div>
+
+    <!-- [完美解决方案]给父元素设置 overflow:hidden; -->
+    <div class="box-father resolve">
+        <div class="box-child"></div>
+    </div>
+</body>
+
+</html>
