@@ -1,0 +1,23 @@
+{
+  "id": "3935226",
+  "name": "學習字體圖標",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11372756",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e8c3",
+      "unicode_decimal": 59587
+    },
+    {
+      "icon_id": "11372777",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e8c6",
+      "unicode_decimal": 59590
+    }
+  ]
+}
