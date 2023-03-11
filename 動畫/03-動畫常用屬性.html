@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1. 定義動畫 */
+    @keyframes move {
+      0% {
+        transform: translateX(0px);
+      }
+
+      100% {
+        transform: translateX(1000px);
+      }
+    }
+
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      /* 2. 調用動畫 */
+      animation-name: move;
+      /* 動畫名稱 */
+
+      animation-duration: 2s;
+      /* 持續時間 */
+
+      animation-timing-function: ease-in;
+      /* 運動曲線 */
+
+      animation-delay: 1s;
+      /* 何時開始 */
+
+      /* 重複次數 */
+      /* animation-iteration-count: infinite;  */
+
+      /* 是否反向播放 */
+      /* animation-direction: alternate; */
+
+      animation-fill-mode: forwards;
+    }
+
+    div:hover {
+      /* 是否停止動畫 */
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
