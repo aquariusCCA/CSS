@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 500px;
+      height: 500px;
+      border: 2px solid red;
+      background: url(./images/ldh.jpg);
+      /* background-size: 500px 500px; */
+
+      /* 1. 只寫一個參數: 肯定是寬度，高度省略了，會等比例縮放 */
+      /* background-size: 500px; */
+
+      /* 2. 裡面的單位可以跟 % -> 相對於父盒子來說 */
+      /* background-size: 50%; */
+
+      /* 3. cover: 等比例拉伸，要完全覆蓋 div 盒子，可能有部分配景圖片顯示不全 */
+      /* background-size: cover; */
+
+      /* 4. contain 高度和寬度等比例拉伸，當寬度或者高度鋪滿 div 盒子，就不再進行拉伸了，可能有部分空白區域。 */
+      background-size: contain;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

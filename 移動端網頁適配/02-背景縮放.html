@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1. 我們有一個 50*50 的盒子需要一個背景圖片，但是根據分析這個圖片還是準備 2 倍的 100*100 */
+    /* 2. 我們需要把這個圖片縮放一半，也就是 50 * 50 (使用 background-size) */
+    div {
+      width: 50px;
+      height: 50px;
+      border: 1px;
+      background: url(./images/ldh.jpg) no-repeat;
+      background-size: 50px 50px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
