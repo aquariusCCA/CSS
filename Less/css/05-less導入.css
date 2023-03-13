@@ -1,0 +1,19 @@
+.father {
+  color: red;
+  /*  */
+  width: 1.81333333rem;
+}
+.father .son {
+  background-color: pink;
+}
+.box {
+  width: 110px;
+  width: 80px;
+  width: 200px;
+  width: 25px;
+}
+/* Less甚至还可以这样 */
+div {
+  width: 40px;
+  border: 15px solid red;
+}

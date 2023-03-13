@@ -1,0 +1,23 @@
+.header {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+
+	// 1. Less 嵌套: 子元素的樣式直接寫到父元素裡面就好了
+  a {
+    color: red;
+		// 2. 如果有偽類、交集選擇器、偽元素選擇器，我們內層選擇器的前面要加上 &
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.nav {
+  .logo{
+    color: green;
+  }
+  &::before {
+    content: '';
+  }
+}

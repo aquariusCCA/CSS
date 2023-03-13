@@ -1,0 +1,18 @@
+.box {
+  width: 100 + 10px; // 110px;
+  width: 100 - 20px; // 80px;
+  width: 100 * 2px; // 200px;
+
+  // 除法
+  // 推荐小括号写法
+  width: (100 / 4px); // 25px;
+  // 不支持 height: 100 ./ 4px; // 25px;
+}
+
+/* Less甚至还可以这样 */
+@width: 10px + 5;
+
+div {
+    width: (@width + 5) * 2;
+    border: @width solid red;
+}
