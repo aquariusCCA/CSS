@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /*
+    - 核心思路 :
+      - 把鏈接 a 轉換為塊級元素，這樣鏈接就可以單獨站一行，並且寬度和高度。
+      - 鼠標經過 a 給鏈接設置背景顏色。
+
+      */
     a {
       display: block;
       width: 200px;
       height: 40px;
+      /* 由於 padding 會撐開盒子，而每個導航欄固定都是 230px，所以我們的 padding + width 的總和必須是 230px。 */
       padding-left: 30px;
       line-height: 40px;
       background-color: #55585a;
@@ -23,6 +31,7 @@
     }
   </style>
 </head>
+
 <body>
   <a href="#">手機 電話卡</a>
   <a href="#">電視 盒子</a>
@@ -32,4 +41,5 @@
   <a href="#">健康 兒童</a>
   <a href="#">耳機 音響</a>
 </body>
+
 </html>

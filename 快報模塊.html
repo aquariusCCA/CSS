@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      /* 去掉 li 前面的小圓點 */
+      list-style: none;
+    }
+
+    .box {
+      width: 248px;
+      height: 163px;
+      margin: 100px auto;
+      border: 1px solid #ccc;
+    }
+
+    .box h3 {
+      height: 32px;
+      /* 因為沒有 width 屬性 所以 padding 不會撐開盒子的寬度 (寬度默認是容器（父級寬度）的100%) */
+      padding-left: 15px;
+      border-bottom: 1px dotted #ccc;
+      font-size: 14px;
+      font-weight: 400;
+      color: gray;
+      line-height: 32px;
+    }
+
+    .box ul {
+      margin-top: 7px;
+    }
+
+    .box ul li {
+      height: 23px;
+      line-height: 23px;
+      /* 因為沒有 width 屬性 所以 padding 不會撐開盒子的寬度 (寬度默認是容器（父級寬度）的100%) */
+      padding-left: 20px;
+    }
+
+    .box ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .box ul li a {
+      font-size: 12px;
+      text-decoration: none;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h3>品優購快報</h3>
+    <ul>
+      <li><a href="#">【特惠】爆款耳機5折秒！</a></li>
+      <li><a href="#">【特惠】母親節，健康好禮低至5折！</a></li>
+      <li><a href="#">【特惠】爆款耳機5折秒！</a></li>
+      <li><a href="#">【特惠】9.9元洗100張照片！</a></li>
+      <li><a href="#">【特惠】長虹智能空調立省1000</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>
