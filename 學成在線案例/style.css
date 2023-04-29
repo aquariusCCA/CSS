@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:before,.clearfix:after {
+  content:"";
+  display:table; 
+}
+.clearfix:after {
+  clear:both;
+}
+.clearfix {
+   *zoom:1;
+} 
+
+.w {
+  width: 1200px;
+  margin: auto;
+}
+
+.header {
+  height: 42px;
+  /* 注意此地方會層疊 w 裡面的 margin */
+  margin: 30px auto;
+}
+
+.logo {
+  float: left;
+  width: 198px;
+  height: 42px;
+}
+
+.nav {
+  /* 添加浮動後，它的大小根據內容來決定。如果之後再繼續添加 li 也不會也任何影響。 */
+  float: left;
+  margin-left: 60px;
+}
+
+.nav ul li {
+  float: left;
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  display: block;
+  height: 42px;
+  padding: 0 10px;
+  line-height: 42px;
+  font-size: 18px;
+  color: #050505;
+}
+
+.nav ul li a:hover {
+  border-bottom: 2px solid #00a4ff;
+  color: #00a4ff;
+}
+
+.search {
+  float: left;
+  margin-left: 70px;
+  width: 412px;
+  height: 42px;
+}
+
+.search input {
+  /* 因為 input 是行內元素，所以和相鄰行內元素在一行上時會有空白縫隙，這就導致 button 就會往下掉下去 (寬度不夠)；要解決這樣的問題就要替 input、button 加上浮動，因為浮動的盒子中間是沒有縫隙的，是緊挨著一起的 */
+  float: left;
+  width: 345px;
+  height: 40px;
+  /* padding 影響了盒子實際大小，所以我們的 width 要減去 15px */
+  padding-left: 15px;
+  /* 邊框會影響盒子實際大小，所以我們的 height 要減去上下邊框 2px */
+  border: 1px solid #00a4ff;
+  border-right: 0;
+  color: #bfbfbf;
+  font-size: 14px;
+}
+
+.search button {
+  float: left;
+  width: 50px;
+  height: 42px;
+  background-color: #00a4ff;
+  /* 按鈕button默認有個邊框需要我們手動去掉 */
+  border: 0;
+  background: url(./images/btn.png);
+}
+
+.user{
+  float: right;
+  margin-right: 30px;
+  line-height: 42px;
+  font-size: 14px;
+  color: #666;
+}
+
+.user img {
+  /* 圖片、屬於行內塊元素，默認的 vertical-align 是基線對齊。此時可以給圖片的 vertical-align 屬性設置為 middle 就可以讓文字和圖片垂直居中對齊了。 */
+  vertical-align: middle;
+}
+/* ----------------------------------------------------------------------------------------- */
+.banner {
+  height: 421px;
+  background-color: #1c036c;
+}
+
+.banner .w {
+  height: 421px;
+  background: url(./images/banner.png) no-repeat;
+}
+
+.subnav {
+  float: left;
+  width: 150px;
+  height: 421px;
+  background-color: rgba(0, 0, 0, .3 );
+}
+.subnav ul li {
+  padding: 0 20px;
+  height: 46px;
+  line-height: 46px;
+}
+
+.subnav ul li a {
+  font-size: 14px;
+  color: #fff;
+}
+
+.subnav ul li a:hover {
+  color: #00a4ff;
+}
+
+.subnav ul li a span {
+  float: right;
+}
+
+.course {
+  /* 浮動的盒子不會有外邊距合併的問題 */
+  float: right;
+  margin-top: 50px;
+  width: 230px;
+  height: 300px;
+  background-color: #fff;
+}
+
+.course h2 {
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background-color: #9bceea;
+  font-size: 18px;
+  color: #fff;
+}
+
+.bd {
+  padding: 0 20px;
+}
+
+.bd .more {
+  display: block;
+  margin-top: 5px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #00a4ff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #00a4ff;
+}
+
+.bd ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.bd ul li h4 {
+  font-size: 16px;
+  color: #4e4e4e;
+}
+
+.bd ul li p {
+  font-size: 12px;
+  color: #a5a5a5;
+}
+
+.goods {
+  margin-top: 10px;
+  height: 60px;
+  /* 利用行高會繼承的特性，巧妙地替 h3、ul、mod 節省程式碼 */
+  line-height: 60px;
+  border-color: #fff;
+  box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
+}
+
+.goods h3 {
+  float: left;
+  margin-left: 30px;
+  font-size: 16px;
+  color: #00a4ff;
+}
+
+.goods ul {
+  float: left;
+  margin-left: 30px;
+}
+
+.goods ul li {
+  float: left;
+}
+
+.goods ul li a {
+  padding: 0 30px;
+  border-left: 1px solid #ccc;
+  font-size: 16px;
+  color: #050505;
+}
+
+.goods .mod {
+  float: right;
+  margin-right: 30px;
+  font-size: 14px;
+  color: #00a4ff;
+}
+
+.box {
+  margin-top: 30px;
+}
+
+.box-hd {
+  height: 45px;
+}
+
+.box-hd h3 {
+  float: left;
+  font-size: 20px;
+  color: #494949;
+}
+
+.box-hd a {
+  float: right;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #a5a5a5
+}
+
+/* 把li 的父親ul 修改的足夠寬一行能裝開5個盒子就不會換行了 */
+.box-bd ul {
+  width: 1225px;
+}
+.box-bd ul li {
+  float: left;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  width: 228px;
+  height: 270px;
+  background-color: #fff;
+}
+
+.box-bd ul li img {
+  width: 100%;
+}
+
+.box-bd ul li h4 {
+  margin: 20px 20px 20px 25px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #050505;
+}
+
+.box-bd .info {
+  margin: 0 20px 0 25px;
+  font-size: 12px;
+  color: #999;
+}
+
+.box-bd .info span {
+  color: #ff7c2d;
+}
+
+.footer {
+  height: 350px;
+}
+
+.footer .w {
+  /* 如果使用 margin-top 會出現外邊距的合併問題，因為 w 有設置 margin: auto；所以比較好的方式是使用 padding-top。 */
+  padding-top: 35px;
+}
+
+.footer .copyright {
+  float: left;
+}
+
+.copyright p {
+  font-size: 12px;
+  color: #666;
+  margin: 20px 0 15px 0;
+}
+
+.copyright .app {
+  display: block;
+  border: 1px solid #00a4ff;
+  width: 118px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  color: #00a4ff;
+}
+
+.footer .links {
+  float: right;
+}
+
+.links dl {
+  float: left;
+  margin-left: 100px;
+}
+
+.links dl dt {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.links dl dt a {
+  font-size: 12px;
+  color: #333;
+}
