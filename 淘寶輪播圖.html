@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul li {
+      list-style: none ;
+    }
+
+    .tb-promo {
+      position: relative;
+      width: 520px;
+      height: 280px;
+      margin: 100px auto;
+    }
+
+    .tb-promo img {
+      width: 520px;
+      height: 280px;
+    }
+
+    /* 並集選擇器可以集體聲明相同的樣式 */
+    .prev, .next {
+      position: absolute;
+      /* 絕對定位的盒子垂直居中 */
+      top: 50%;
+      margin-top: -15px;
+      /* 加了絕對定位的盒子可以直接設置高度和寬度 */
+      width: 20px;
+      height: 30px;
+      line-height: 30px;
+      background-color: rgba(0, 0, 0, .3);
+      text-align: center;
+      color: #fff;
+    }
+
+    .prev {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    .next {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
+    .promo-nav {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      margin-left: -35px;
+      width: 70px;
+      height: 13px;
+      background-color: rgba(255, 255, 255, .3);
+      border-radius: 7px;
+    }
+
+    .promo-nav li {
+      float: left;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      margin: 3px;
+      background-color: #fff;
+    }
+
+    .promo-nav .selected {
+      background-color: #ff5000;
+    }
+  </style>
+</head>
+<body>
+  <div class="tb-promo">
+    <img src="./images/tb.jpg">
+    <!-- 左側按鈕 -->
+    <a href="#" class="prev">&lt;</a>
+    <!-- 右側按鈕 -->
+    <a href="#" class="next">&gt;</a>
+    <!-- 小圓點 -->
+    <ul class="promo-nav">
+      <li class="selected"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+</html>
