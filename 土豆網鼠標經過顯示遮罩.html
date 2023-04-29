@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 
+    核心原理 : 原先半透明的黑色遮罩看不見，鼠標經過大盒子之後就顯示出來。
+    遮罩的盒子不佔有位置，就需要用絕對定位和 display 配合使用。
+   -->
+   <style>
+    .tudou {
+      position: relative;
+      margin: 30px auto;
+      width: 444px;
+      height: 320px;
+      background-color: deepskyblue;
+    }
+
+    .tudou:hover .mask {
+      display: block;
+    }
+
+    .mask {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .3) url('./images/arr.png') no-repeat center center;
+    }
+
+    .tudou img {
+      width: 100%;
+      height: 100%;
+    }
+   </style>
+</head>
+<body>
+  <div class="tudou">
+    <div class="mask"></div>
+    <img src="./images/tudou.jpg" alt="">
+  </div>
+</body>
+</html>
