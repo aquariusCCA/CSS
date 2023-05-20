@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #777;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+.layout {
+  display: flex;
+}
+
+.left {
+  min-height: 100vh;
+  /* overflow: hidden: 用來防止因為內容較寬，導致讓 .left 盒子被撐大，所以才使用的。 */
+  overflow: hidden;
+  flex: 0 1 20rem;
+  background-color: #333;
+}
+
+.left .left-main {
+  color: #fff;
+}
+
+.left .left-hading {
+  background-color: #404040;
+  padding: 0.5rem;
+}
+
+.left .left-hading i,
+.left .left-hading span {
+  margin: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.left .left-main ul li {
+  margin-left: 4rem;
+  padding: 0.5rem 0;
+}
+
+.right {
+  flex: 1;
+  background-color: #fff;
+}
+
+.right .right-header {
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.right .right-header h1 {
+  margin: 0.2rem;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.right .right-header h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ccc;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.content .content-title i {
+  font-size: 3rem;
+  color: red;
+}
+
+.content .content-title h3 {
+  font-size: 1.8rem;
+}
+
+.content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.content ul li {
+  flex: 0 1 24%;
+  overflow: hidden;
+}
+
+.content ul li img {
+  width: 100%;
+  transition: all 0.8s ease;
+}
+
+.content ul li img:hover {
+  transform: scale(1.2);
+}
+
+/* 
+  1. 針對分辨率小於 1200 時，展示的效果 (如下): 
+    - 圖片一行顯示兩個，有換行的效果。
+    - 標題字的大小發生了變化，變小。
+
+
+  2. 針對分辨率小於 992 時，展示的效果 (如下): 
+    - 圖片一行顯示兩個，有換行的效果。
+    - 左側的導航欄隱藏了。
+    
+
+  3. 針對分辨率小於 768 時，展示的效果 (如下):
+    - 圖片一行顯示一個，有換行的效果。
+    - 左側的導航欄隱藏了。
+    - 標題字的大小發生了變化，變小。
+*/
+
+@media (max-width: 1200px) {
+  .content ul li {
+    flex: 0 1 49%;
+    margin: 0.4rem 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .left {
+    /* display: none; */
+    margin-left: -20rem;
+  }
+
+  .right .right-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .right .right-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content ul {
+    justify-content: center;
+  }
+
+  .content ul li {
+    flex: 0 1 60%;
+    margin: 0.4rem 0;
+  }
+
+  .right .right-header h1 {
+    font-size: 2rem;
+  }
+
+  .right .right-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.layout, .left {
+  transition: all 0.8s ease;
+}
